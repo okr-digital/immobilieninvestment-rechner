@@ -69,11 +69,13 @@ export default function App() {
       <aside className="w-full lg:w-1/2 bg-paper border-r border-slate-200 flex flex-col lg:h-full">
         {/* Header */}
         <div className="p-4 border-b border-slate-200 bg-white flex justify-between items-center shrink-0">
-          <div className="flex items-center gap-2 font-bold text-xl text-[#0052CC]">
+          <div className="flex items-center gap-2">
             <div className="bg-[#0052CC] text-white p-1 rounded">
                <Calculator size={20} />
             </div>
-            OKR digital
+            <div className="font-bold text-xl tracking-tight leading-none">
+              <span className="text-slate-900">OKR</span><span className="text-[#0052CC]">.digital</span>
+            </div>
           </div>
           <div className="flex gap-2">
             
