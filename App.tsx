@@ -5,7 +5,7 @@ import { calculateDeal } from './services/calculationEngine';
 import { Accordion, InputField, Toggle } from './components/InputComponents';
 import { Dashboard } from './components/Dashboard';
 import { TrafficLight } from './components/TrafficLight';
-import { Calculator, Save, RotateCcw, HelpCircle, BarChart3, Table as TableIcon, LayoutDashboard, Copy, Trash2 } from 'lucide-react';
+import { Calculator, Save, RotateCcw, HelpCircle, BarChart3, Table as TableIcon, LayoutDashboard, Copy, Trash2, MessageSquare } from 'lucide-react';
 
 const formatCurrency = (val: number) => new Intl.NumberFormat('de-AT', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(val);
 const formatCurrencyCompact = (val: number) => new Intl.NumberFormat('de-AT', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0, notation: 'compact' }).format(val);
@@ -92,6 +92,16 @@ export default function App() {
             <div className="w-px h-6 bg-slate-200 mx-1"></div>
 
             <button onClick={handleReset} title="Reset" className="p-2 text-slate-400 hover:text-indigo-600 hover:bg-slate-100 rounded transition-colors"><RotateCcw size={18} /></button>
+            
+            {/* FEEDBACK BUTTON */}
+            <a 
+              href="mailto:hallo@okr-digital.at?subject=Feedback%20Immo-Rechner" 
+              title="Feedback senden" 
+              className="p-2 text-slate-400 hover:text-indigo-600 hover:bg-slate-100 rounded transition-colors flex items-center justify-center"
+            >
+              <MessageSquare size={18} />
+            </a>
+
             <button title="Save" className="p-2 text-slate-400 hover:text-indigo-600 hover:bg-slate-100 rounded transition-colors"><Save size={18} /></button>
           </div>
         </div>
